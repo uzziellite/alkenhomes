@@ -1,0 +1,36 @@
+---
+import Layout from "@layouts/layout.astro"
+
+const videos = [
+	{
+		"title":"How we do it",
+		"link":"dT1FmwohQW4"
+	},
+	{
+		"title":"Maximizing Space",
+		"link":"7_-rDSvh_6c"
+	},
+	{
+		"title":"Mahogany Installation",
+		"link":"TXnE9GmEIzI"
+	}
+]
+---
+
+<Layout title="Our Videos" description="Please check eburon company limited videos. These are our construction projects in various parts of the country from paint jobs to construction projects">
+	<section class="container mx-auto px-4 mt-48">
+		<h1 class="text-4xl text-indigo-600 text-center uppercase my-6 font-bold">
+			Our Videos
+		</h1>
+		<p class="text-center mb-6">
+			Check the videos of our existing work
+		</p>
+		<div class="mt-8 mb-2 grid sm:grid-cols-2 gap-4">
+			{
+				videos.map((item) => (
+					<iframe class="w-full" src={`https://www.youtube.com/embed/${item.link}`} title={item.title} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen height="320" width="480"></iframe>
+				))
+			}
+		</div>
+	</section>
+</Layout>

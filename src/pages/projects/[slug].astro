@@ -1,0 +1,125 @@
+---
+import Layout from "@layouts/layout.astro"
+
+// src/pages/projects/[slug].astro
+export async function getStaticPaths() {
+  
+  const posts = [
+    {
+    	slug: "tatu-city-kijani-ridge",
+    	title: "Tatu City Kijani Ridge",
+    	images:[
+    		"/images/portfolio/kijani-tatu-city-1.jpeg",
+    		"/images/portfolio/kijani-tatu-city-2.jpeg",
+    		"/images/portfolio/kijani-tatu-city-3.jpeg",
+    		"/images/projects/kijani-1.jpg",
+    		"/images/projects/kijani-2.jpg",
+    		"/images/projects/kijani-3.jpg",
+    		"/images/projects/kijani-4.jpg",
+    		"/images/projects/kijani-5.jpg",
+    		"/images/projects/kijani-6.jpg",
+    	],
+    	description:"Tatu city kijani ridge was a professional paint and tiling project that required a high level of professionalism to ensure the house constructed had a modern look for inhabitants of the city of Nairobi."
+    },
+    {
+    	slug: "kenol-project-finishing",
+    	title:"Kenol Project Finish",
+    	images:[
+    		"/images/projects/kenol-banner.jpg",
+    		"/images/projects/kenol-1.jpg",
+    		"/images/projects/kenol-2.jpg",
+    		"/images/projects/kenol-3.jpg",
+    		"/images/projects/kenol-4.jpg",
+    		"/images/projects/kenol-5.jpg",
+    		"/images/projects/kenol-6.jpg",
+    		"/images/projects/kenol-7.jpg",
+    		"/images/projects/kenol-8.jpg",
+    		"/images/projects/kenol-9.jpg",
+    		"/images/projects/kenol-10.jpg",
+    		"/images/projects/kenol-11.jpg",
+    		"/images/projects/kenol-12.jpg",
+    		"/images/projects/kenol-13.jpg",
+    		"/images/projects/kenol-14.jpg",
+    		"/images/projects/kenol-15.jpg"
+    	],
+    	description:"This project involved cabinetry and other fittings, finishing, internal paint and external real rock wall master"
+    },
+    {
+    	slug: "homabay-gutter-waterproofing-and-crack-filling",
+    	title:"Homabay Gutter water proofing",
+    	images:[
+    		"/images/projects/homa-banner.jpg",
+    		"/images/projects/homa-1.jpg",
+    		"/images/projects/homa-2.jpg",
+    		"/images/projects/homa-3.jpg",
+    		"/images/projects/homa-4.jpg",
+    		"/images/projects/homa-5.jpg",
+    		"/images/projects/homa-6.jpg",
+    		"/images/projects/homa-7.jpg"
+    	],
+    	description:"This house repair project was done in homabay and involved water proofing the gutter and crack filling in a house that was full of cracks"
+    },
+    {
+    	slug: "wall-special-effects-inspection",
+    	title:"Wall special effects inspection",
+    	images:[
+    		"/images/projects/wall-banner.jpg",
+    		"/images/projects/wall-1.jpg",
+    		"/images/projects/wall-2.jpg",
+    		"/images/projects/wall-3.jpg",
+    		"/images/projects/wall-4.jpg",
+    		"/images/projects/wall-5.jpg"
+    	],
+    	description:"Special effects are a classy way to brighten the look on your walls. We provide the best special effects for your walls in the market"
+    },
+    {
+    	slug: "project-karen",
+    	title:"Project Karen",
+    	images:[
+    		"/images/projects/karen-banner.jpg",
+    		"/images/projects/karen-1.jpg",
+    		"/images/projects/karen-2.jpg",
+    		"/images/projects/karen-3.jpg",
+    		"/images/projects/karen-4.jpg",
+    		"/images/projects/karen-5.jpg",
+    		"/images/projects/karen-6.jpg",
+    		"/images/projects/karen-7.jpg",
+    		"/images/projects/karen-8.jpg",
+    		"/images/projects/karen-9.jpg",
+    	],
+    	description:"Professional painting services offered to clients in Karen to give their houses an amazing finish that leaves the building looking visually appealing."
+    }
+  ]
+  
+  return posts.map((post) => {
+    return {
+      params: { slug: post.slug },
+      props: { post }
+    }
+  })
+}
+
+const {slug} = Astro.params
+const {post} = Astro.props
+const {description} = Astro.params
+---
+
+<Layout title="Projects" description={post.description}>
+	<section class="container mx-auto px-4 mt-48">
+		<h1 class="text-4xl text-indigo-600 text-center uppercase my-6 font-bold">
+			{post.title}
+		</h1>
+		<div class="flex justify-center">
+			<p class="text-center mb-6 max-w-md">
+				{post.description}
+			</p>
+		</div>
+		<div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+			{
+				post.images.map((item) => (
+					<img class="object-cover w-full aspect-square rounded-xl" src={item} />
+				))
+			}
+		</div>
+	</section>
+</Layout>

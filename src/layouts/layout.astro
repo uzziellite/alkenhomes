@@ -1,0 +1,108 @@
+---
+import Header from "@components/Header.astro"
+import Footer from "@components/Footer.astro"
+
+const {title} = Astro.props
+const {description} = Astro.props
+const {og_image} = Astro.props
+const {og_url} = Astro.props
+---
+<html lang="en-KE">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,300,400,700,900" rel="stylesheet">
+    <meta name='robots' content='max-image-preview:large' />
+    <script is:inline>
+      window._wpemojiSettings = {
+        "baseUrl": "https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/72x72\/",
+        "ext": ".png",
+        "svgUrl": "https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/svg\/",
+        "svgExt": ".svg",
+        "source": {
+          "concatemoji": "https:\/\/garantiwebtasarim.com\/wordpress\/artpaint\/wp-includes\/js\/wp-emoji-release.min.js"
+        }
+      };
+      /*! This file is auto-generated */
+      ! function(e, a, t) {
+        var n, r, o, i = a.createElement("canvas"),
+          p = i.getContext && i.getContext("2d");
+
+        function s(e, t) {
+          var a = String.fromCharCode,
+            e = (p.clearRect(0, 0, i.width, i.height), p.fillText(a.apply(this, e), 0, 0), i.toDataURL());
+          return p.clearRect(0, 0, i.width, i.height), p.fillText(a.apply(this, t), 0, 0), e === i.toDataURL()
+        }
+
+        function c(e) {
+          var t = a.createElement("script");
+          t.src = e, t.defer = t.type = "text/javascript", a.getElementsByTagName("head")[0].appendChild(t)
+        }
+        for (o = Array("flag", "emoji"), t.supports = {
+            everything: !0,
+            everythingExceptFlag: !0
+          }, r = 0; r < o.length; r++) t.supports[o[r]] = function(e) {
+          if (p && p.fillText) switch (p.textBaseline = "top", p.font = "600 32px Arial", e) {
+            case "flag":
+              return s([127987, 65039, 8205, 9895, 65039], [127987, 65039, 8203, 9895, 65039]) ? !1 : !s([55356, 56826, 55356, 56819], [55356, 56826, 8203, 55356, 56819]) && !s([55356, 57332, 56128, 56423, 56128, 56418, 56128, 56421, 56128, 56430, 56128, 56423, 56128, 56447], [55356, 57332, 8203, 56128, 56423, 8203, 56128, 56418, 8203, 56128, 56421, 8203, 56128, 56430, 8203, 56128, 56423, 8203, 56128, 56447]);
+            case "emoji":
+              return !s([129777, 127995, 8205, 129778, 127999], [129777, 127995, 8203, 129778, 127999])
+          }
+          return !1
+        }(o[r]), t.supports.everything = t.supports.everything && t.supports[o[r]], "flag" !== o[r] && (t.supports.everythingExceptFlag = t.supports.everythingExceptFlag && t.supports[o[r]]);
+        t.supports.everythingExceptFlag = t.supports.everythingExceptFlag && !t.supports.flag, t.DOMReady = !1, t.readyCallback = function() {
+          t.DOMReady = !0
+        }, t.supports.everything || (n = function() {
+          t.readyCallback()
+        }, a.addEventListener ? (a.addEventListener("DOMContentLoaded", n, !1), e.addEventListener("load", n, !1)) : (e.attachEvent("onload", n), a.attachEvent("onreadystatechange", function() {
+          "complete" === a.readyState && t.readyCallback()
+        })), (e = t.source || {}).concatemoji ? c(e.concatemoji) : e.wpemoji && e.twemoji && (c(e.twemoji), c(e.wpemoji)))
+      }(window, document, window._wpemojiSettings);
+    </script>
+    <link rel='stylesheet' id='wp-block-library-css' href='/wp-includes/css/dist/block-library/style.min6a4d.css' media='all' />
+    <link rel='stylesheet' id='classic-theme-styles-css' href='/wp-includes/css/classic-themes.min68b3.css' media='all' />
+    <link rel='stylesheet' id='contact-form-7-css' href='/wp-content/plugins/contact-form-7/includes/css/styles40df.css' media='all' />
+    <link rel='stylesheet' id='font-css' href='/wp-content/themes/artpaint/css/icon-font68b3.css' media='all' />
+    <link rel='stylesheet' id='style-css' href='/wp-content/themes/artpaint/css/style68b3.css' media='all' />
+    <link rel='stylesheet' id='fancybox-css' href='/wp-content/themes/artpaint/css/fancybox.min68b3.css' media='all' />
+    <link rel='stylesheet' id='swiper-css' href='/wp-content/themes/artpaint/css/swiper.min68b3.css' media='all' />
+    <link rel='stylesheet' id='bootstrap-css' href='/wp-content/themes/artpaint/css/bootstrap.min68b3.css' media='all' />
+    <link rel='stylesheet' id='odometer-css' href='/wp-content/themes/artpaint/css/odometer.min68b3.css' media='all' />
+    <link rel='stylesheet' id='flaticon-css' href='/wp-content/themes/artpaint/css/flaticon68b3.css' media='all' />
+    <link rel='stylesheet' id='custom-css' href='/wp-content/themes/artpaint/custom68b3.css' media='all' />
+    <link rel="stylesheet" type="text/css" href="/wp-content/themes/artpaint/inline.css" media="all">
+    <title>Alken Homes</title>
+    <link rel="shortcut icon" type="image/png" href="/wp-content/uploads/2022/07/favicon-artpaint.png">
+    <meta name="description" content="Choose the renovation package that fits your budget, and we'll come and renovate your home.">
+  </head>
+  <body>
+    <div class="preloader">
+      <figure>
+        <img src="/images/logo.png" alt="Image">
+      </figure>
+    </div>
+    <div class="page-transition"></div>
+    <Header />
+      <slot />
+    <Footer />
+    <script src='/wp-includes/js/dist/vendor/regenerator-runtime.min3937.js' id='regenerator-runtime-js'></script>
+    <script src='/wp-includes/js/dist/vendor/wp-polyfill.min2c7c.js' id='wp-polyfill-js'></script>
+    <script src='/wp-content/themes/artpaint/js/team68b3.js' id='team-js'></script>
+    <script src='/wp-content/themes/artpaint/js/jquery.min68b3.js' id='jquery-js'></script>
+    <script src='/wp-content/themes/artpaint/js/fancybox.min68b3.js' id='fancybox-js'></script>
+    <script src='/wp-content/themes/artpaint/js/swiper.min68b3.js' id='swiper-js'></script>
+    <script src='/wp-content/themes/artpaint/js/odometer.min68b3.js' id='odometer-js'></script>
+    <script src='/wp-content/themes/artpaint/js/wow.min68b3.js' id='wow-js'></script>
+    <script src='/wp-content/themes/artpaint/js/scripts68b3.js' id='scripts-js'></script>
+    <script src='/wp-content/themes/artpaint/js/3d.jquery68b3.js' id='3d-js'></script>
+    <script src='/wp-content/themes/artpaint/js/magnific68b3.js' id='magnific-js'></script>
+    <script src='/wp-content/themes/artpaint/js/mag68b3.js' id='mag-js'></script>
+    <script src='/wp-content/themes/artpaint/js/pointer68b3.js' id='pointer-js'></script>
+    <script src='/wp-content/themes/artpaint/js/yukari-cik68b3.js' id='yukari-cik-js'></script>
+    <script src='/wp-content/themes/artpaint/custom68b3.js' id='custom-js'></script>
+    <!--Cursor Script-->
+    <script is:inline>
+      init_pointer({})
+    </script>
+  </body>
+</html>

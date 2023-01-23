@@ -1,0 +1,27 @@
+[
+	{
+		"name":"Project Karen",
+		"banner":"/images/projects/karen-banner.jpg",
+		"slug":"/project-karen"
+	},
+	{
+		"name":"Tatu City, Kijani Ridge",
+		"banner":"/images/tatu-city-kijani-ridge.jpeg",
+		"slug":"/tatu-city-kijani-ridge"
+	},
+	{
+		"name":"Kenol Project Finishing",
+		"banner":"/images/projects/kenol-banner.jpg",
+		"slug":"/kenol-project-finishing"
+	},
+	{
+		"name":"Homabay Gutter-waterproofing and crack filling",
+		"banner":"/images/projects/homa-banner.jpg",
+		"slug":"/homabay-gutter-waterproofing-and-crack-filling"
+	},
+	{
+		"name":"Wall Special Effects Inspection",
+		"banner":"/images/projects/wall-banner.jpg",
+		"slug":"/wall-special-effects-inspection"
+	}
+]
