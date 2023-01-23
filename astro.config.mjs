@@ -3,8 +3,8 @@ import { defineConfig } from 'astro/config';
 import svelte from '@astrojs/svelte';
 import sitemap from '@astrojs/sitemap';
 import prefetch from '@astrojs/prefetch';
-import node from '@astrojs/node';
-//import vercel from '@astrojs/vercel/serverless';
+//import node from '@astrojs/node';
+import vercel from '@astrojs/vercel/serverless';
 
 // https://astro.build/config
 export default defineConfig({
@@ -14,14 +14,15 @@ export default defineConfig({
 		svelte(),
 		sitemap({
 			customPages:[
-				'https://www.alkenhomes.com/'
+				'https://www.alkenhomes.com/',
+				'https://www.alkenhomes.com/about'
 			]
 		}),
 		prefetch()
 	],
 	output:"server",
-	adapter: node({
+	/*adapter: node({
     mode: 'standalone'
-  })
-  //adapter:vercel()
+  })*/
+  adapter:vercel()
 });
