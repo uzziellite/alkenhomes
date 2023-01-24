@@ -1,17 +1,46 @@
 ---
 import Layout from "@layouts/layout.astro"
+
+//Load blog items
+const res = await fetch(`${import.meta.env.PUBLIC_CMS}wp-json/wp/v2/posts?categories=3&_embed&per_page=20&sort=desc`)
+const data = await res.json()
 ---
 
-<Layout title="Projects" description="">
-	<header class="page-header wow fadeInUp" data-wow-delay="0.5s" data-background="/images/about.jpg">
-    <div class="container">
-      <h2>Blog</h2>
-      <div class="bosluk3"></div>
-      <p>
-        <a href="/" class="headerbreadcrumb">Home</a>
-        <i class="flaticon-right-chevron"></i>Blog
-      </p>
+<Layout title="Blogs" description="Alken Homes blog is the place where you can read the latest information on house painting. We freely share our expertise with you.">
+<header class="page-header wow fadeInUp" data-wow-delay="0.5s" data-background="/images/about.jpg">
+  <div class="container">
+    <h2>Blog</h2>
+    <div class="bosluk3"></div>
+    <p>
+      <a href="/" class="headerbreadcrumb">Home</a>
+      <i class="flaticon-right-chevron"></i>Blog
+    </p>
+  </div>
+  <!-- end container -->
+</header>
+<section class="news-alani-sayfa">
+  <div class="container">
+    <div class="row">
+      {
+        data.map((item) => (
+          <div class="col-lg-4">
+            <div class="post-kutu" style="cursor:pointer;">
+              <img width="373" height="223" src={item._embedded["wp:featuredmedia"] ? item._embedded["wp:featuredmedia"][0].media_details.sizes.full.source_url : ''} class="attachment-custom-size size-custom-size wp-post-image" alt={item.title.rendered} decoding="async" loading="lazy" />
+              <h3 class="baslik-3 h-yazi-margin-kucuk">
+                {item.title.rendered}
+              </h3>
+              <div class="post-kutu--yazi">
+                <div set:html={item.excerpt.rendered}></div>
+              </div>
+              <div class="h-yazi-ortalama h-yazi-margin-50">
+                <div class="bosluksv"></div>
+                <a href={`/blog/${item.slug}`} class="custom-button">More</a>
+              </div>
+            </div>
+          </div>
+        ))
+      }
     </div>
-    <!-- end container -->
-  </header>
+  </div>
+</section>
 </Layout>
