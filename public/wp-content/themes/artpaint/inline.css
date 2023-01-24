@@ -1808,5 +1808,9 @@ a:hover {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
+  width: auto;
+}
+
+.prose {
+  font-size: 18px !important;
 }
