@@ -1,23 +1,24 @@
 ---
 import Layout from "@layouts/layout.astro"
+import Callback from "@components/Callback.svelte"
 ---
 
-<Layout title="Alken Homes Company Limited" description="Eburon company limited is a professional company that specializes in household finishing. This includes, paint jobs, house fittings, waterproofing, cabinetry and gypsum installation among other services">
+<Layout title="Alken Homes Company Limited" description="Alken Homes company limited is a professional painting company that majors in finishing construction projects.">
 <!-- Slider -->
 <header class="slider">
   <div class="main-slider">
     <div class="swiper-wrapper">
       <div class="swiper-slide">
-        <div class="slide-image wow fadeInUp" data-wow-delay="0.3s" data-background="/images/banner-1.png"></div>
+        <div class="slide-image wow fadeInUp" data-wow-delay="0.3s" data-background="/images/banner.jpg"></div>
         <div class="container">
           <h1>Do You Need <br> your building painted? </h1>
-          <p>Let us do the job within your budget. </p>
+          <p>Let us do the job within a reasonable budget range. </p>
           <div class="bosluk1"></div>
           <a href="/services">Learn More →</a>
         </div>
       </div>
       <div class="swiper-slide">
-        <div class="slide-image wow fadeInUp" data-wow-delay="0.3s" data-background="/images/banner-1.png"></div>
+        <div class="slide-image wow fadeInUp" data-wow-delay="0.3s" data-background="/images/banner-2.jpg"></div>
         <div class="container">
           <h1>We are <br> Professionals </h1>
           <p>Our painting services are the best in the market</p>
@@ -39,11 +40,11 @@ import Layout from "@layouts/layout.astro"
         <!--<img class="imagerotate" src="../wp-content/uploads/2022/07/circle-paint.png" alt="" >-->
       </div>
       <div class="galeri wow zoomIn" data-wow-delay="s">
-        <img src="/images/painter-1.png" alt="Este About" class="">
+        <img src="/images/otiato.jpg" alt="Este About" class="">
       </div>
       <div class="countt wow fadeInUp" data-wow-delay="1s">
         <div class="counter-box wow fade">
-          <span class="odometer" data-count="6" data-status="yes">0</span>
+          <span class="odometer" data-count="8" data-status="yes">0</span>
           <h6>Years of Experience</h6>
         </div>
       </div>
@@ -61,19 +62,20 @@ import Layout from "@layouts/layout.astro"
       </h2>
       <div class="bosluk333"></div>
       <p class="paragraf wow fadeInRight" data-wow-delay="0.5s">
-      <p>With our expert staff, we add a new perspective to your home with our economic or luxury, fast and quality works. Choose the renovation package that fits your budget, and we&#8217;ll come and renovate your home.</p>
+      <p>ALKEN HOMES is a Special Purpose Vehicle (SPV) for the reputable ALKEN PRODUCTS
+      LIMITED (APL) which is a locally-owned and managed painting company in Kenya, providing superior quality Painting and Decor services for the last 8 years. We understand the importance of seamless results and professional care for the success of each project, the reason why we have made Quality Control System the cornerstone of our services to exceed expectations, every time</p>
       <div class="bosluk333"></div>
       <img class="divider" width="120" height="15" title="divider" alt="divider" src="../wp-content/uploads/2022/05/divider.jpg">
       <div class="row">
         <div class="col-sm-2 wow fadeInRight" data-wow-delay="0.6s">
           <div class="iconleft">
-            <i class="flaticon-helmet"></i>
+            <i class="flaticon-team"></i>
           </div>
         </div>
         <div class="col-sm-10 wow fadeInRight" data-wow-delay="0.7s">
           <h3 class="baslik-3s h-yazi-margin-kucuk1">Professional Team</h3>
           <br>
-          <p class="paragraf-info">We produce guaranteed solutions in all paint works with our competent and experienced team.</p>
+          <p class="paragraf-info">We work in multiple teams, each with it’s own team-leader, thus efficiently handling multiple projects simultaneously whilst keeping our signature “personal touch”.</p>
           <br>
         </div>
       </div>
@@ -81,13 +83,13 @@ import Layout from "@layouts/layout.astro"
       <div class="row">
         <div class="col-sm-2 wow fadeInRight" data-wow-delay="0.8s">
           <div class="iconleft">
-            <i class="flaticon-stopwatch"></i>
+            <i class="flaticon-flag"></i>
           </div>
         </div>
         <div class="col-sm-10 wow fadeInRight" data-wow-delay="0.9s">
-          <h3 class="baslik-3s h-yazi-margin-kucuk1">Quick Paint</h3>
+          <h3 class="baslik-3s h-yazi-margin-kucuk1">Quality Paint</h3>
           <br>
-          <p class="paragraf-info">Thanks to our solid expertise, we paint and deliver your home and office very quickly.</p>
+          <p class="paragraf-info">We obtain all our products directly from the manufacturers to ensure competitive pricing. Thus getting a vast range of products to choose from and quotations can be tailored to suit each individual client.</p>
           <br>
         </div>
       </div>
@@ -117,7 +119,7 @@ import Layout from "@layouts/layout.astro"
           <div class="paketler4__pr">
             <div class="paketler4__pr-kutu">
               <h3 class="baslik-orta h-yazi-margin-kucuk">Reliability</h3>
-              <p class="services-kutu2--yazi1 wow fade"> We provide accurate, reliable and ethical services with our expert staff. We apply the fastest and most reliable methods for your brand. </p>
+              <p class="services-kutu2--yazi1 wow fade"> We work with you to help you make intelligent decisions about product acquisitions, setting up of show houses, listening carefully to the needs and wishes of our clients to interpret them into what they desire.</p>
             </div>
           </div>
         </div>
@@ -137,7 +139,7 @@ import Layout from "@layouts/layout.astro"
           <div class="paketler4__pr">
             <div class="paketler4__pr-kutu">
               <h3 class="baslik-orta h-yazi-margin-kucuk">Loyalty</h3>
-              <p class="services-kutu2--yazi1 wow fade"> Our long-term work continues until the job is finished. We establish solid and long-term relationships with all the companies we work with. </p>
+              <p class="services-kutu2--yazi1 wow fade"> Our long-term work continues until the job is finished. We establish solid and long-term relationships with all the clients we work with. </p>
             </div>
           </div>
         </div>
@@ -157,7 +159,7 @@ import Layout from "@layouts/layout.astro"
           <div class="paketler4__pr">
             <div class="paketler4__pr-kutu">
               <h3 class="baslik-orta h-yazi-margin-kucuk">Experience</h3>
-              <p class="services-kutu2--yazi1 wow fade"> Thanks to the experience we have gained over the years, the specialist provides service with the latest technology devices. </p>
+              <p class="services-kutu2--yazi1 wow fade"> We are a one stop Shop for finishes. We are the link between Property Developers, Architects, Contractors, and Suppliers as we complete interior works on timelines.</p>
             </div>
           </div>
         </div>
@@ -177,9 +179,52 @@ import Layout from "@layouts/layout.astro"
           <div class="paketler4__pr">
             <div class="paketler4__pr-kutu">
               <h3 class="baslik-orta h-yazi-margin-kucuk">Support</h3>
-              <p class="services-kutu2--yazi1 wow fade"> We accelerate your business processes by providing professional support. We solve your problems and provide instant solutions. </p>
+              <p class="services-kutu2--yazi1 wow fade"> We research on new interior finishes to give you product knowledge, quantity and quality, price differences, and availability of product. We do sampling on site, provide catalogues, and walk-through showrooms with clients.</p>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="paketler-alani" data-background="#ffffff">
+  <div class="bosluk3"></div>
+  <div class="bosluk3"></div>
+  <div class="tabloozellik">
+    <div class="tablo--1-ve-2">
+      <img src="/images/why-us.jpg">
+    </div>
+    <div class="tablo--1-ve-2">
+      <h2 class="h2-baslik-anasayfa-ozel wow fade">
+        Why Alken Products Limited?
+      </h2>
+      <div class="bosluk333"></div>
+      <p class="paragraf wow fade">
+        <p>All of our painting services are executed with expert care and undergo our rigorous quality control system. Our clients also can expect the highest industry standards in terms of sustainability, safety, and an adherence to best practices within the industry. We are committed to the following policies and procedures.<br><br>
+        We get full technical support from our suppliers. This includes new trends in product application and use.<br><br> 
+        We have access only to high quality products that are time tested ensuring a high quality and durable finish every time all the time. We only use products that meet the standards of both Kenya and the international market.<br><br>
+        We use modern methods of paint application through the use of paint sprayers. This ensures an even film of paint the surface bringing to life colors and a high-quality surface finish.<br><br>
+        Application of skimming product after wall preparation provides a marble glow, smooth finish on the wall, hence there will be less sanding of the filler, minimal dust pollution and in turn use minimal paint. This also creates environmental sustainability with les environmental pollution and proper disposal on any hazardous wastes.
+      </p>
+    </div>
+  </div>
+</section>
+<section class="qua1-top wow fadeInUp" data-wow-delay="0.3s">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="bosluk2dt"></div>
+        <h2 class="h2-baslik-hizmetler-223 wow fadeInLeft" data-wow-delay="0.5s" style="visibility: visible;"> Fill in the Form, We'll Call You! </h2>
+        <div class="bosluk2dt"></div>
+        <p class="h2-baslik-hizmetler-223__paragraf wow fadeInLeft" data-wow-delay="0.6s"> For detailed information about our painting services and products, leave your number to us and our experts will call you. </p>
+      </div>
+      <div class="col-md-6 wow fadeInRight" data-wow-delay="0.5s">
+        <div role="form" class="wpcf7" id="wpcf7-f1287-o1" lang="en-US" dir="ltr">
+          <div class="screen-reader-response">
+            <p role="status" aria-live="polite" aria-atomic="true"></p>
+            <ul></ul>
+          </div>
+          <Callback client:load />
         </div>
       </div>
     </div>

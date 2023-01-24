@@ -1,90 +1,17 @@
 ---
 import Layout from "@layouts/layout.astro"
-
-const team = [
-	{
-		"name":"Mathew K Kiptoo",
-		"role":"Technical Director",
-		"email":"technicaldirector@eburoncompany.com",
-		"phone":"+254 725 424 281",
-		"work_phone":"+254 733 424 285",
-		"image":"/images/team/kiptoo.png",
-		"bio":"Mr. Mathew is a professionally trained master painter who has been working with Eburon Company Limited from inception. He provides leadership motivation and vision for the company. You will find Mr. Mathew on-site for adherence to contract document and a safe work environment. Performance, quality and financial expenditures are closely monitored to ensure customer satisfaction and successful completion of each contract. This company is the realization of Kiptoo's entrepreneurial spirit after working extensively with a commercial painting contractor and property management firm on a broad range of residential, commercial and government buildings. He has a well known reputation of working with renown brands. To name a few; Jotun Kenya, Duracoat/Basco Paints, Neuce and Sika among others. With a gregarious personality and a cooperative mindset, Mr. Mathew cultivates a cohesive team with staff, clients, suppliers and vendors to ensure integrity, excellence and exceptional customer service."
-	},
-	{
-		"name":"Alex Kaara Muchira",
-		"role":"Managing Director",
-		"email":"md@eburoncompany.com",
-		"phone":"+254 722 503 853",
-		"work_phone":"+254 733 424 285",
-		"image":"/images/team/alex.png",
-		"bio":"Mr. Alex K. Muchira is the managing director of Eburon Company Limited with more than 6 years of experience in the construction industry of which 4 years have been as a managing director in the company. He manages daily operations, internal accounting procedures, bid proposals, construction contracts and financial expenditures to ensure feasibility and fiscal responsibilities. Mr. Alex is proficient in business development, project coordination and quality assurance with the acquisition and procurement of personnel, construction materials and equipment for new construction, modernization and building maintenance contracts. He incorporates innovative technology to facilitate management systems, company policy and the specific needs of each client"
-	},
-	{
-		"name":"Mariam Mwalimu Sharubadi",
-		"role":"General Manager",
-		"email":"sales@eburoncompany.com",
-		"phone":"+254 787 275 998",
-		"work_phone":"+254 733 424 285",
-		"image":"/images/team/mariam.jpg",
-		"bio":"Ms. Mariam M. Sharubadi is an administrator at Eburon Company Limited who wears many hats. She is a trained procurement officer with rich experience in Building and Construction industry. She has excellent communication skills and manages each project as a team effort, trains field personnel and supervises all field operations. Her tasks include explaining contracts and technical information to staff; supervising personnel and activities on site, developing work-around for delays and other related problems. She oversees daily business activities, improving overall business functions, training heads of departments, managing budgets, developing strategic plans, creating policies and communication goals to our teams on site. Ms. Mariam calculates cost estimates, budgets and schedules by selecting appropriate construction methods for the job and budget. She ensures the company delivers quality projects on time and within the budget range"
-	}
-]
 ---
 
-<Layout title="Our Team" description="The team at Eburon company limited is made up of professionals who are well versed with construction projects and are able to deliver the very best in the construction industry.">
-	<section class="container mx-auto px-4 mt-48">
-		<h1 class="text-4xl text-indigo-600 text-center uppercase my-6 font-bold">
-			Our Team
-		</h1>
-		<p class="text-center mb-6">
-			Meet members of our team and get to interact with us
-		</p>
-		{
-			team.map((item) => (
-				<div class="p-8 sm:flex sm:space-x-6 bg-gray-200 shadow-md rounded-lg my-4">
-					<div class="flex-shrink-0 w-full mb-6 h-78 sm:h-36 sm:w-36 sm:mb-0">
-						<img src={item.image} alt={item.name} class="object-cover object-center sm:w-full sm:h-full rounded rounded-full" />
-					</div>
-					<div class="flex flex-col space-y-4">
-						<div>
-							<h2 class="text-2xl font-semibold">
-								{item.name}
-							</h2>
-							<span class="text-indigo-600">
-								{item.role}
-							</span>
-						</div>
-						<div class="space-y-3">
-							<span class="flex items-center space-x-2">
-								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" aria-label="Email address" class="w-4 h-4">
-									<path fill="currentColor" d="M274.6,25.623a32.006,32.006,0,0,0-37.2,0L16,183.766V496H496V183.766ZM464,402.693,339.97,322.96,464,226.492ZM256,51.662,454.429,193.4,311.434,304.615,256,268.979l-55.434,35.636L57.571,193.4ZM48,226.492,172.03,322.96,48,402.693ZM464,464H48V440.735L256,307.021,464,440.735Z"></path>
-								</svg>
-								<span>
-									{item.email}
-								</span>
-							</span>
-							<span class="flex items-center space-x-2">
-								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" aria-label="Phonenumber" class="w-4 h-4">
-									<path fill="currentColor" d="M449.366,89.648l-.685-.428L362.088,46.559,268.625,171.176l43,57.337a88.529,88.529,0,0,1-83.115,83.114l-57.336-43L46.558,362.088l42.306,85.869.356.725.429.684a25.085,25.085,0,0,0,21.393,11.857h22.344A327.836,327.836,0,0,0,461.222,133.386V111.041A25.084,25.084,0,0,0,449.366,89.648Zm-20.144,43.738c0,163.125-132.712,295.837-295.836,295.837h-18.08L87,371.76l84.18-63.135,46.867,35.149h5.333a120.535,120.535,0,0,0,120.4-120.4v-5.333l-35.149-46.866L371.759,87l57.463,28.311Z"></path>
-								</svg>
-								<span>
-									{item.phone}
-								</span>
-							</span>
-							<span class="flex items-center space-x-2">
-								<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
-								<span>
-									{item.work_phone}
-								</span>
-							</span>
-						</div>
-						<span>
-							{item.bio}
-						</span>
-					</div>
-				</div>
-			))
-		}
-	</section>
+<Layout title="Our Team" description="The team at Alken Homes company limited is made up of professional painters who are well versed with different painting projects.">
+	<header class="page-header wow fadeInUp" data-wow-delay="0.5s" data-background="/images/about.jpg">
+    <div class="container">
+      <h2>Our Team</h2>
+      <div class="bosluk3"></div>
+      <p>
+        <a href="/" class="headerbreadcrumb">Home</a>
+        <i class="flaticon-right-chevron"></i>Team
+      </p>
+    </div>
+    <!-- end container -->
+  </header>
 </Layout>
