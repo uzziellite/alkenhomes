@@ -2,18 +2,18 @@
 import Layout from "@layouts/layout.astro"
 
 //Load blog items
-const res = await fetch(`${import.meta.env.PUBLIC_CMS}wp-json/wp/v2/posts?categories=3&_embed&per_page=20&sort=desc`)
+const res = await fetch(`${import.meta.env.PUBLIC_CMS}wp-json/wp/v2/posts?categories=6&_embed&per_page=20&sort=desc`)
 const data = await res.json()
 ---
 
-<Layout title="Blog - Alken Homes" description="Alken Homes blog is the place where you can read the latest information on house painting. We freely share our expertise with you.">
+<Layout title="Our Services - Alken Homes" description="Alken Homes provides the best house painting services in Kenya. We are professionals who know what we do to achieve desired results">
 <header class="page-header wow fadeInUp" data-wow-delay="0.5s" data-background="/images/about.jpg">
   <div class="container">
-    <h2>Blog</h2>
+    <h2>Our Services</h2>
     <div class="bosluk3"></div>
     <p>
       <a href="/" class="headerbreadcrumb">Home</a>
-      <i class="flaticon-right-chevron"></i>Blog
+      <i class="flaticon-right-chevron"></i>Services
     </p>
   </div>
   <!-- end container -->
@@ -34,7 +34,7 @@ const data = await res.json()
               </div>
               <div class="h-yazi-ortalama h-yazi-margin-50">
                 <div class="bosluksv"></div>
-                <a href={`/blog/${item.slug}`} class="custom-button">More</a>
+                <a href={`/services/${item.slug}`} class="custom-button">More</a>
               </div>
             </div>
           </div>
