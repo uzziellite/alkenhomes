@@ -2,17 +2,27 @@
 import Header from "@components/Header.astro"
 import Footer from "@components/Footer.astro"
 
+const locale = 'en-KE'
+const {type} = Astro.props
+const {author} = Astro.props
 const {title} = Astro.props
-const {description} = Astro.props
-const {og_image} = Astro.props
+const {og_width} = Astro.props
 const {og_url} = Astro.props
+const {og_height} = Astro.props
+const {og_image} = Astro.props
+const {canonical} = Astro.props
+const {publish_time} = Astro.props
+const {description} = Astro.props
+const {modified_time} = Astro.props
+const {og_image_type} = Astro.props
+const {estimate_read_time} = Astro.props
 ---
-<html lang="en-KE">
+<html lang={locale}>
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,300,400,700,900" rel="stylesheet">
-    <meta name='robots' content='max-image-preview:large' />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
     <link rel='stylesheet' id='wp-block-library-css' href='/wp-includes/css/dist/block-library/style.min6a4d.css' media='all' />
     <link rel='stylesheet' id='classic-theme-styles-css' href='/wp-includes/css/classic-themes.min68b3.css' media='all' />
     <link rel='stylesheet' id='contact-form-7-css' href='/wp-content/plugins/contact-form-7/includes/css/styles40df.css' media='all' />
@@ -23,11 +33,29 @@ const {og_url} = Astro.props
     <link rel='stylesheet' id='bootstrap-css' href='/wp-content/themes/artpaint/css/bootstrap.min68b3.css' media='all' />
     <link rel='stylesheet' id='odometer-css' href='/wp-content/themes/artpaint/css/odometer.min68b3.css' media='all' />
     <link rel='stylesheet' id='flaticon-css' href='/wp-content/themes/artpaint/css/flaticon68b3.css' media='all' />
-    <link rel='stylesheet' id='custom-css' href='/wp-content/themes/artpaint/custom68b3.css' media='all' />
     <link rel="stylesheet" type="text/css" href="/wp-content/themes/artpaint/inline.css" media="all">
     <title>{title}</title>
     <link rel="shortcut icon" type="image/png" href="/images/logo.png">
-    <meta name="description" content="Choose the renovation package that fits your budget, and we'll come and renovate your home.">
+    <meta name="description" content={description}>
+    <link rel="canonical" href={canonical} />
+    <meta property="og:locale" content={locale} />
+    <meta property="og:type" content={type} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:site_name" content="Alken Homes" />
+    <meta property="article:published_time" content={publish_time} />
+    <meta property="article:modified_time" content={modified_time} />
+    <meta property="og:image" content={og_image} />
+    <meta property="og:image:width" content={og_width} />
+    <meta property="og:image:height" content={og_height} />
+    <meta property="og:image:type" content={og_image_type} />
+    <meta name="author" content={author} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:label1" content="Written by" />
+    <meta name="twitter:data1" content={author} />
+    <meta name="twitter:label2" content="Est. reading time" />
+    <meta name="twitter:data2" content={estimate_read_time} />
   </head>
   <body>
     <div class="preloader">
@@ -53,7 +81,6 @@ const {og_url} = Astro.props
     <script src='/wp-content/themes/artpaint/js/mag68b3.js' id='mag-js'></script>
     <script src='/wp-content/themes/artpaint/js/pointer68b3.js' id='pointer-js'></script>
     <script src='/wp-content/themes/artpaint/js/yukari-cik68b3.js' id='yukari-cik-js'></script>
-    <script src='/wp-content/themes/artpaint/custom68b3.js' id='custom-js'></script>
     <!--Cursor Script-->
     <script is:inline>
       init_pointer({})
