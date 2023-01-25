@@ -1,5 +1,6 @@
 ---
 import Layout from "@layouts/layout.astro"
+import Callback from "@components/Callback.svelte"
 
 const { slug } = Astro.params;
 
@@ -44,6 +45,27 @@ if (!post[0])
         </h2>
         <div class="bosluk333"></div>
         <div class="wow fade display-6" set:html={post[0].content.rendered}></div>
+      </div>
+    </div>
+  </section>
+  <section class="qua1-top wow fadeInUp" data-wow-delay="0.3s">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="bosluk2dt"></div>
+          <h2 class="h2-baslik-hizmetler-223 wow fadeInLeft" data-wow-delay="0.5s" style="visibility: visible;"> Fill in the Form, We'll Call You! </h2>
+          <div class="bosluk2dt"></div>
+          <p class="h2-baslik-hizmetler-223__paragraf wow fadeInLeft" data-wow-delay="0.6s"> For detailed information about our painting services and products, leave your number to us and our experts will call you. </p>
+        </div>
+        <div class="col-md-6 wow fadeInRight" data-wow-delay="0.5s">
+          <div role="form" class="wpcf7" id="wpcf7-f1287-o1" lang="en-US" dir="ltr">
+            <div class="screen-reader-response">
+              <p role="status" aria-live="polite" aria-atomic="true"></p>
+              <ul></ul>
+            </div>
+            <Callback client:load />
+          </div>
+        </div>
       </div>
     </div>
   </section>

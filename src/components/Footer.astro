@@ -1,3 +1,9 @@
+---
+//Load footer links
+const res = await fetch(`${import.meta.env.PUBLIC_CMS}wp-json/wp/v2/posts?categories=6&_embed&per_page=6&sort=desc`)
+const data = await res.json()
+---
+
 <!--Footer Alanı-->
 <footer class="footer">
   <div class="container">
@@ -73,49 +79,15 @@
         <div class="footer-menu cce">
           <div class="menu-services-container">
             <ul id="menu-services" class="menu" itemscope itemtype="http://www.schema.org/SiteNavigationElement">
-              <li id="menu-item-2082" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2082">
-                <a href="/services/interior-and-exterior-painting">Interior &amp; Exterior Painting</a>
-              </li>
-              <li id="menu-item-2081" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2081">
-                <a href="/services/gypsum-and-cabinetry">Gypsum &amp; Cabinetry</a>
-              </li>
-              <li id="menu-item-2080" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2080">
-                <a href="/services/water-proofing">Water Proofing</a>
-              </li>
-              <li id="menu-item-2079" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2079">
-                <a href="/services/cracking-and-filling">Cracking &amp; Filling</a>
-              </li>
-              <li id="menu-item-2078" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2078">
-                <a href="/services/epoxy-flooring">Epoxy Flooring</a>
-              </li>
-              <li id="menu-item-2077" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2077">
-                <a href="/services/plastering">Plastering</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <!-- end col-2 -->
-      <div class="col-lg-2 col-sm-6 cce wow animated fadeInUp animated" data-wow-delay="0.5s">
-        <h6 class="widget-title">Quick Links</h6>
-        <div class="footer-menu">
-          <div class="menu-quick-links-container">
-            <ul id="menu-quick-links" class="menu" itemscope itemtype="http://www.schema.org/SiteNavigationElement">
-              <li id="menu-item-2242" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-5 current_page_item menu-item-2242">
-                <a href="/" aria-current="page">Home</a>
-              </li>
-              <li id="menu-item-1737" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1737">
-                <a href="/about">About Us</a>
-              </li>
-              <li id="menu-item-1735" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1735">
-                <a href="/blog">Blog</a>
-              </li>
-              <li id="menu-item-2083" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2083">
-                <a href="/services">Services</a>
-              </li>
-              <li id="menu-item-1734" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1734">
-                <a href="/contact">Contact</a>
-              </li>
+              {
+                data.map((item) => (
+                  <li id="menu-item-2082" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2082">
+                    <a href={`/services/${item.slug}`}>
+                      {item.title.rendered}
+                    </a>
+                  </li>
+                ))
+              }
             </ul>
           </div>
         </div>
