@@ -1,6 +1,6 @@
 ---
 //Load footer links
-const res = await fetch(`${import.meta.env.PUBLIC_CMS}wp-json/wp/v2/posts?categories=6&_embed&per_page=6&sort=desc`)
+const res = await fetch(`${import.meta.env.PUBLIC_CMS}wp-json/wp/v2/posts?categories=3&_embed&per_page=6&sort=desc`)
 const data = await res.json()
 ---
 
@@ -100,7 +100,7 @@ const data = await res.json()
     <div class="row">
       <div class="col-12">
         <p class="copyright">
-          &copy; {new Date().getFullYear()} Alken Home Paints
+          &copy; {new Date().getFullYear()} Alken Homes Decor
         </p>
       </div>
     </div>

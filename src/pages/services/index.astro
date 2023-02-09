@@ -2,7 +2,7 @@
 import Layout from "@layouts/layout.astro"
 
 //Load blog items
-const res = await fetch(`${import.meta.env.PUBLIC_CMS}wp-json/wp/v2/posts?categories=6&_embed&per_page=20&sort=desc`)
+const res = await fetch(`${import.meta.env.PUBLIC_CMS}wp-json/wp/v2/posts?categories=3&_embed&per_page=20&sort=desc`)
 const data = await res.json()
 ---
 
